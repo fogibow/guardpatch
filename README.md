@@ -119,7 +119,7 @@ Example:
 
 A Python application contains:
 
-```python
+   python
 subprocess.run("ping -c 1 " + host, shell=True)
 
 **Installation**
