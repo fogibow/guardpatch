@@ -1,3 +1,170 @@
+# 🛡️ GuardPatch — Defensive AI Patch Assistant
+
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](LICENSE)
+[![Built with Go](https://img.shields.io/badge/Built%20with-Go-00ADD8.svg)](#)
+[![AI: Local-first](https://img.shields.io/badge/AI-local--first-black.svg)](#)
+[![Ollama Supported](https://img.shields.io/badge/Ollama-supported-green.svg)](#)
+[![Security: Human-in-the-loop](https://img.shields.io/badge/security-human--in--the--loop-purple.svg)](#)
+[![Status: Experimental](https://img.shields.io/badge/status-experimental-orange.svg)](#)
+
+**From risky code to reviewed remediation — faster, safer, and human-approved.**
+
+GuardPatch helps developers and security engineers find insecure code patterns, generate defensive patch suggestions, create regression test ideas, and produce remediation reports using local-first AI workflows.
+
+GuardPatch is built for **defensive security**, **secure code repair**, and **human-in-the-loop remediation**.
+
+> It suggests patches. Humans approve them.
+
+---
+
+## 👤 Author / Maintainer
+
+**Reni David**  
+Senior / Lead Cloud Security Engineer  
+Cloud Security | DevSecOps | AI Security & Governance | Defensive Security Automation
+
+- GitHub: [@fogibow](https://github.com/fogibow)
+- LinkedIn: [renidm](https://www.linkedin.com/in/renidm/)
+- Portfolio: [renz.live](https://www.renz.live/)
+
+---
+# GuardPatch
+
+**Defensive AI Patch Assistant for secure vulnerability remediation**
+
+GuardPatch is an experimental open-source tool that helps developers and security engineers analyze vulnerable code patterns, generate candidate security patches, create defensive regression test ideas, and validate fixes in a controlled workflow.
+
+GuardPatch is designed for **defensive security use only**.
+
+---
+
+## Why GuardPatch?
+
+Security teams often find vulnerabilities faster than development teams can safely remediate them. GuardPatch aims to reduce the time between finding a vulnerability and preparing a reviewed fix.
+
+It helps answer:
+
+- Where is the risky code?
+
+- What is the likely secure fix?
+
+- Why is the fix safer?
+
+- What test should prove the issue is fixed?
+
+- What should a human reviewer check before accepting the patch?
+
+GuardPatch does **not** replace developers, security engineers, or code review. It assists them.
+
+---
+
+## Core Principle
+
+> GuardPatch generates candidate fixes that must be reviewed, tested, and approved by humans before use.
+
+GuardPatch is **human-in-the-loop** by design.
+
+---
+
+## What GuardPatch Does
+
+- Analyzes local source code for risky security patterns
+
+- Detects common insecure coding patterns
+
+- Uses AI to suggest candidate patches
+
+- Explains why a patch may reduce risk
+
+- Suggests defensive regression tests
+
+- Produces remediation reports
+
+- Supports local-first AI workflows using Ollama
+
+- Encourages safe, review-based vulnerability remediation
+
+---
+
+## What GuardPatch Does Not Do
+
+GuardPatch does not:
+
+- Attack third-party systems
+
+- Generate weaponized exploit code
+
+- Automatically patch production systems
+
+- Replace secure code review
+
+- Guarantee that generated patches are correct
+
+- Bypass responsible disclosure processes
+
+- Run against systems without authorization
+
+---
+
+## Current MVP Scope
+
+The first version focuses on simple local source-code analysis and AI-assisted patch suggestions.
+
+### Supported languages in MVP
+
+- Python
+
+- C
+
+### Initial vulnerability patterns
+
+Python:
+
+- `subprocess` with `shell=True`
+
+- unsafe `eval()`
+
+- unsafe `exec()`
+
+- unsafe `pickle.load()` / `pickle.loads()`
+
+C:
+
+- `strcpy()`
+
+- `strcat()`
+
+- `gets()`
+
+- `sprintf()`
+
+### Initial AI provider
+
+- Ollama local models
+
+Planned later:
+
+- OpenAI provider
+
+- Anthropic provider
+
+- Go analyzer
+
+- JavaScript/TypeScript analyzer
+
+- Java analyzer
+
+- Rust analyzer
+
+- Docker sandbox validation
+
+- SARIF output
+
+- GitHub Actions integration
+
+- Pull request workflow
+
+---
 ## Example Use Cases
 
 GuardPatch can be used for:
